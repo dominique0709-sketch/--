@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Invitación Boda</title>
+<style>
+/* ===== Reset y body ===== */
+body {
+  margin:0;
+  font-family: 'Georgia', serif;
+  background: #fefaf5;
+  color: #4a4a4a;
+  text-align: center;
+}
+
+/* ===== Secciones ===== */
+.section {
+  min-height:100vh;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  align-items:center;
+  padding:40px 20px;
+}
+.hidden { display:none; }
+
+/* ===== Corazón elegante ===== */
+.heart {
+  width:80px;
+  height:80px;
+  position:relative;
+  transform:rotate(-45deg);
+  animation: pulse 1s ease-in-out 3;
+}
+.heart::before,
+.heart::after {
+  content:"";
+  position:absolute;
+  width:80px;
+  height:80px;
+  background:#d4b89f;
+  border-radius:50%;
+}
+.heart::before { top:-40px; left:0; }
+.heart::after { left:40px; top:0; }
+@keyframes pulse {
+  0%{ transform: rotate(-45deg) scale(1); }
+  50%{ transform: rotate(-45deg) scale(1.3); }
+  100%{ transform: rotate(-45deg) scale(1); }
+}
+
+/* ===== Nombre grande y fino ===== */
+.invited-name {
+  font-size:36px;
+  font-family: 'Cursive', Georgia, serif;
+  font-weight:bold;
+  color:#b57e61;
+  margin:15px 0;
+}
+
+/* ===== Carta inicial ===== */
+.card {
+  background:#fff9f3;
+  padding:50px 30px;
+  border-radius:25px;
+  box-shadow:0 15px 40px rgba(0,0,0,0.08);
+  max-width:400px;
+  position:relative;
+  text-align:center;
+}
+.card::before {
+  content:"";
+  position:absolute;
+  top:-15px; left:-15px;
+  width:calc(100% + 30px);
+  height:calc(100% + 30px);
+  border:2px solid #d4b89f;
+  border-radius:25px;
+}
+.button {
+  margin-top:25px;
+  padding:12px 30px;
+  border:none;
+  background:#d4b89f;
+  color:white;
+  border-radius:30px;
+  font-size:16px;
+  cursor:pointer;
+}
+.button:hover { background:#c8a68b; }
+
+/* ===== Hero fondo ===== */
+.hero {
+  background:url('https://via.placeholder.com/800x1200') center/cover no-repeat;
+  position:relative;
+  color:white;
+}
+.hero::before {
+  content:"";
+  position:absolute;
+  top:0; left:0;
+  width:100%; height:100%;
+  background:rgba(0,0,0,0.25);
+}
+.hero-content
